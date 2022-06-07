@@ -3,6 +3,8 @@ const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const buttonSend = document.querySelector('#submit-btn');
 const checkbox = document.querySelector('#agreement');
+const contadorCaracteres = document.querySelector('#counter');
+const caracteresTextArea = document.querySelector('#textarea');
 
 function login() {
   if (email.value === 'tryber@teste.com' && password.value === '123456') {
@@ -23,3 +25,11 @@ function enableClick() {
 }
 
 checkbox.addEventListener('click', enableClick);
+
+function counterTextArea() {
+  const textLength = caracteresTextArea.value.length;
+  const finalValue = 500 - textLength;
+  contadorCaracteres.innerText = finalValue.toString();
+}
+
+caracteresTextArea.addEventListener('input', counterTextArea);
