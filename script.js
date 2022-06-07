@@ -1,5 +1,6 @@
 const button = document.querySelector('#submitButton');
 const email = document.querySelector('#input-email');
+const email2 = document.querySelector('#email');
 const password = document.querySelector('#password');
 const buttonSend = document.querySelector('#submit-btn');
 const checkbox = document.querySelector('#agreement');
@@ -7,7 +8,7 @@ const contadorCaracteres = document.querySelector('#counter');
 const caracteresTextArea = document.querySelector('#textarea');
 
 function login() {
-  if (email.value === 'tryber@teste.com' && password.value === '123456') {
+  if (email2.value === 'tryber@teste.com' && password.value === '123456') {
     alert('Olá, Tryber!');
   } else {
     alert('Email ou senha inválidos.');
