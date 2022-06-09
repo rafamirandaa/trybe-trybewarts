@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
   background-image: url('images/backgrounds/fire.jpg');
-  background-size: cover;
+  background-size: 110%;
   color: white;
 }
 
@@ -40,12 +40,25 @@ label {
   margin: 1rem 0;
 }
 
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+  width: 27rem;
+  align-self: center;
+}
+
 /* Header */
 .header {
   display: flex;
   background-color: rgb(194, 36, 70);
   justify-content: space-between;
   padding: 0.5rem 0.7rem;
+  width: 100%;
 }
 
 #email , #password , #submitButton {
@@ -70,13 +83,14 @@ header img {
 
 #trybewarts-header-title {
   align-self: center;
-  margin-left: 12%;
+  padding-left: 12%;
 }
 
 /* Main */
 .main {
   display: flex;
   justify-content: center;
+  margin: auto;
   margin-top: 4rem;
 }
 
@@ -87,10 +101,10 @@ header img {
   margin-right: 10rem;
 }
 
+/* Inputs Texto */
 #evaluation-form > h1 {
   text-align: center;
   margin-bottom: 2rem;
-  background-color: rgba(0, 0, 0, 0.267);
 }
 
 #input-name {
@@ -110,17 +124,10 @@ header img {
   align-self: center;
 }
 
-hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  opacity: 0.5;
-  width: 27rem;
-  align-self: center;
-}
-
+/* Família + Materias */
 #secondSection {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .setFamily {
@@ -139,6 +146,7 @@ hr {
   margin-bottom: 1rem;
 }
 
+/* Radio Avaliação Trybewarts */
 #radioRate {
   text-align: center;
   margin-bottom: 1rem;
@@ -149,10 +157,13 @@ hr {
   margin-left: 0.5rem;
 }
 
-.divCounter {
-  display: flex;
-  margin-top: 0.3rem;
-  justify-content: flex-end;
+#radioDiv {
+  margin-top: 1rem;
+}
+
+/* Contador + TextArea + Checkbox concordar uso infos */
+#counter {
+  margin-left: 27rem;
 }
 
 #textarea {
@@ -161,9 +172,18 @@ hr {
 }
 
 #divLabelInfos {
-  margin-bottom: 2rem;
+  text-align: center;
+  margin: 2rem 0;
 }
 
+#conteinerTextArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Botão ENVIAR */
 #divSubmitButton {
   display: flex;
   justify-content: center;
@@ -178,14 +198,11 @@ hr {
   color: grey;
 }
 
-#trybewarts-forms-logo {
-  height: 500px;
-  margin-right: 10rem;
-}
-
+/* Formulário após preeenchimento infos + Footer */
 footer {
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 #form-data {
@@ -196,4 +213,82 @@ footer {
 #form-data p {
   margin-bottom: 15px;
   font-weight: 600;
+}
+
+@media screen and ( max-width : 1440px ) {
+
+  #trybewarts-forms-logo {
+    height: 300px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  #evaluation-form {
+    display: flex;
+    flex-direction: column;
+    width: 675px;
+    margin-right: 0;
+  }
+
+  body {
+    background-image: url('images/backgrounds/fire.jpg');
+    background-size: 140%;
+    color: white;
+    margin: auto;
+  }
+
+
+  #email , #password , #submitButton {
+    display: none;
+  }
+
+  #trybewarts-header-title {
+    align-self: center;
+    padding-right: 19%;
+  }
+
+}
+
+@media screen and ( max-width : 800px ) {
+
+  body {
+    background-image: url('images/backgrounds/fire2.jpg');
+    background-size: 280%;
+    color: white;
+    margin: auto;
+  }
+
+  #secondSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    margin: 1rem 0;
+  }
+
+  .labelContent {
+    text-align: center;
+  }
+
+  .divMaterials {
+    margin-right: 0;
+  }
+
+  .secondDivContent {
+    margin-left: 1rem;
+  }
+
+  .box {
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
